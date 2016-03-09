@@ -1,4 +1,6 @@
 FROM qnib/terminal
 
-ENV GOPATH=/root/
-RUN yum install -y git-core golang
+ENV GOPATH=/usr/local/
+RUN dnf install -y git-core golang make
+RUN pip install --upgrade pip && \
+    pip install mock
