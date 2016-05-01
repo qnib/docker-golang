@@ -1,6 +1,4 @@
-FROM qnib/terminal
+FROM qnib/fedora
 
 ENV GOPATH=/usr/local/
-RUN dnf install -y git-core golang make
-RUN pip install --upgrade pip && \
-    pip install mock
+RUN dnf install -y golang make automake autoconf git-core python-configobj python-configobj python-mock
