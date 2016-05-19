@@ -2,7 +2,7 @@ FROM qnib/fedora
 
 ENV GOPATH=/usr/local/ \
     LIBSODIUM_VER=1.0.10 \
-    ZMQ_VER=4.1.1 \
+    ZMQ_VER=4.1.4 \
     CZMQ_VER=3.0.1 \
     PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 RUN dnf install -y golang make automake autoconf git-core python-configobj python-configobj python-mock gcc-c++ libsodium-devel tar
