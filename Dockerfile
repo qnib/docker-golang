@@ -20,4 +20,5 @@ RUN wget -qO - http://download.zeromq.org/zeromq-${ZMQ_VER}.tar.gz |tar xfz - -C
  && make install \
  && cd \
  && rm -rf /opt/zeromq* /opt/czmq* \
- && go get github.com/zeromq/goczmq
+ && go get github.com/zeromq/goczmq \
+ && go get cmd/vet
