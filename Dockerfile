@@ -21,4 +21,6 @@ RUN wget -qO - http://download.zeromq.org/zeromq-${ZMQ_VER}.tar.gz |tar xfz - -C
  && cd \
  && rm -rf /opt/zeromq* /opt/czmq* \
  && go get github.com/zeromq/goczmq \
- && go get cmd/vet
+ && go get cmd/vet \
+ && go get github.com/docker/engine-api \
+ && go get golang.org/x/net/context
