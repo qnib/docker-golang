@@ -24,3 +24,6 @@ RUN wget -qO - http://download.zeromq.org/zeromq-${ZMQ_VER}.tar.gz |tar xfz - -C
  && go get cmd/vet \
  && go get github.com/docker/engine-api \
  && go get golang.org/x/net/context
+RUN go get github.com/buger/goterm \
+ && go get github.com/spf13/cobra
+RUN go get github.com/spf13/viper
