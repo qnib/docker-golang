@@ -1,9 +1,9 @@
 FROM qnib/fedora
 
+ARG LIBSODIUM_VER=1.0.10 
+ARG ZMQ_VER=4.1.4 
+ARG CZMQ_VER=3.0.1 
 ENV GOPATH=/usr/local/ \
-    LIBSODIUM_VER=1.0.10 \
-    ZMQ_VER=4.1.4 \
-    CZMQ_VER=3.0.1 \
     PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ \
     LD_LIBRARY_PATH=/usr/local/lib
 RUN dnf install -y golang make automake autoconf git-core python-configobj python-configobj python-mock gcc-c++ libsodium-devel tar
@@ -23,7 +23,8 @@ RUN wget -qO - http://download.zeromq.org/zeromq-${ZMQ_VER}.tar.gz |tar xfz - -C
  && go get github.com/zeromq/goczmq \
  && go get cmd/vet \
  && go get github.com/docker/engine-api \
- && go get golang.org/x/net/context
-RUN go get github.com/buger/goterm \
- && go get github.com/spf13/cobra
-RUN go get github.com/spf13/viper
+ && go get golang.org/x/net/context \
+ && go get github.com/buger/goterm \
+ && go get github.com/spf13/cobra \
+ && go get github.com/spf13/viper \
+ && go get -u github.com/kardianos/govendor
