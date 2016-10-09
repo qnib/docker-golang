@@ -6,7 +6,7 @@ ARG CZMQ_VER=3.0.1
 ENV GOPATH=/usr/local \
     PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ \
     LD_LIBRARY_PATH=/usr/local/lib
-RUN dnf install -y golang make unzip findutils perl-ExtUtils-MakeMaker openssl-devel automake curl-devel expat-devel gettext autoconf python-configobj python-configobj python-mock gcc-c++ libsodium-devel tar gnuplot
+RUN dnf install -y bc golang make unzip findutils perl-ExtUtils-MakeMaker openssl-devel automake curl-devel expat-devel gettext autoconf python-configobj python-configobj python-mock gcc-c++ libsodium-devel tar gnuplot
 RUN cd /tmp/ \
  && wget -q https://github.com/git/git/archive/master.zip \
  && unzip master.zip \
