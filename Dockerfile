@@ -33,6 +33,8 @@ RUN git clone  https://github.com/docker/engine-api ${GOPATH}/src/github.com/doc
 RUN go get -d github.com/mattn/gom github.com/docker/go-connections \
  && go install github.com/mattn/gom
 RUN go get -d github.com/docker/go-units github.com/docker/go-units github.com/pkg/errors golang.org/x/net/context github.com/stretchr/testify
+RUN go get -d github.com/prometheus/client_model/go
+RUN go get github.com/qnib/prom2json
 #RUN go get golang.org/x/net/context cmd/cover cmd/vet github.com/mattn/gom github.com/stretchr/testify/assert github.com/pkg/errors
 # libsodium
 #RUN wget -qO - http://download.zeromq.org/zeromq-${ZMQ_VER}.tar.gz |tar xfz - -C /opt/ \
