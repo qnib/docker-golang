@@ -36,6 +36,7 @@ RUN go get -d github.com/docker/go-units github.com/docker/go-units github.com/p
 RUN go get -d github.com/prometheus/client_model/go
 RUN go get github.com/qnib/prom2json
 RUN go get -u github.com/kardianos/govendor
+RUN go get github.com/axw/gocov/gocov
 
 #RUN go get golang.org/x/net/context cmd/cover cmd/vet github.com/mattn/gom github.com/stretchr/testify/assert github.com/pkg/errors
 # libsodium
