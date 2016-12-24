@@ -1,4 +1,4 @@
-FROM qnib/fedora
+FROM qnib/fedora:24
 
 ARG LIBSODIUM_VER=1.0.10
 ARG ZMQ_VER=4.1.4
